@@ -11,11 +11,6 @@ class Cook(AbstractUser):
         verbose_name="years of experience",
         validators=[MinValueValidator(0), MaxValueValidator(50)],
     )
-    username = models.CharField(unique=True, max_length=150)
-    email = models.EmailField(unique=True, max_length=254)
-    first_name = models.CharField(max_length=150)
-    last_name = models.CharField(max_length=150)
-    password = models.CharField(max_length=128)
 
     class Meta:
         verbose_name = "Cook"
