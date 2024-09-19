@@ -7,7 +7,7 @@
       "email": "admin@email.com",
       "first_name": "admin_first_name",
       "last_name": "admin_last_name",
-      "password": "pbkdf2_sha256$870000$BGgz3Ag21TYekvsgnVD6JR$EgAfoxozqJBcbLW683cPn/sZ9jrtqWpkqKdifuzk1R4=",
+      "password": "pbkdf2_sha256$870000$tGYrkfMyuv063h2ZFOG5lQ$oi307mDAWkfY7QDZg2CtHnWmX3uBJ3bOIJofVuX3NIc=",
       "years_of_experience": 15
     }
   },
