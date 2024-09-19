@@ -5,9 +5,12 @@
     "fields": {
       "username": "admin",
       "email": "admin@email.com",
+      "is_superuser": "True",
+      "is_active": "True",
+      "is_staff": "True",
       "first_name": "admin_first_name",
       "last_name": "admin_last_name",
-      "password": "pbkdf2_sha256$870000$tGYrkfMyuv063h2ZFOG5lQ$oi307mDAWkfY7QDZg2CtHnWmX3uBJ3bOIJofVuX3NIc=",
+      "password": "admin",
       "years_of_experience": 15
     }
   },
@@ -17,9 +20,11 @@
     "fields": {
       "username": "user",
       "email": "james.smith@email.com",
+      "is_active": "True",
+      "is_staff": "True",
       "first_name": "James",
       "last_name": "Smith",
-      "password": "pbkdf2_sha256$870000$lRjs8HANioqABCl0qxRINR$Wisix+Y6GnBo0xXee4QiZkQdfjhTOFBffDj7LYEi118=",
+      "password": "user",
       "years_of_experience": 16
     }
   },
@@ -31,7 +36,7 @@
       "email": "emma.jones@email.com",
       "first_name": "Emma",
       "last_name": "Jones",
-      "password": "pbkdf2_sha256$320000$73Z1Y57bcoscZ37s9rE9v0$4SEQ0TtXwJKzO5/CRdFSrTifatiPjkZ38gM2H8Kqsdg=",
+      "password": "emma.jones@email.com",
       "years_of_experience": 18
     }
   },
@@ -43,7 +48,7 @@
       "email": "oliver.johnson@email.com",
       "first_name": "Oliver",
       "last_name": "Johnson",
-      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l1$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "password": "oliver.johnson@email.com",
       "years_of_experience": 10
     }
   },
@@ -55,7 +60,7 @@
       "email": "isabella.brown@email.com",
       "first_name": "Isabella",
       "last_name": "Brown",
-      "password": "pbkdf2_sha256$320000$QtPol3T7x9quBj4BnbnVwW$UwT4kihkRfSvQEWEeuqVKwMgis2ikKVZfJDBcQMvOKY=",
+      "password": "isabella.brown@email.com",
       "years_of_experience": 28
     }
   },
@@ -67,7 +72,7 @@
       "email": "liam.wilson@email.com",
       "first_name": "Liam",
       "last_name": "Wilson",
-      "password": "pbkdf2_sha256$390000$9wqlSZZMAmTYa3vmmKYzU2$Xi3kN0qzB+Om2qRdC24UbD7lr9CL/IhQEEheE/vCsvU=",
+      "password": "liam.wilson@email.com",
       "years_of_experience": 18
     }
   },
@@ -79,7 +84,7 @@
       "email": "sophia.martin@email.com",
       "first_name": "Sophia",
       "last_name": "Martin",
-      "password": "pbkdf2_sha256$390000$do5hLFYChrmRhVW3XnmWo2$oMj7sHsrJUHoJyqPjnsCZZ+G0QFSR1e0tvH8X/KrTJ4=",
+      "password": "sophia.martin@email.com",
       "years_of_experience": 30
     }
   },
@@ -91,7 +96,7 @@
       "email": "ethan.miller@email.com",
       "first_name": "Ethan",
       "last_name": "Miller",
-      "password": "pbkdf2_sha256$320000$73Z1Y57bcoscZ37s9rE9v0$4SEQ0TtXwJKzO5/CRdFSrTifatiPjkZ38gM2H8Kqsdg=",
+      "password": "ethan.miller@email.com",
       "years_of_experience": 15
     }
   },
@@ -103,7 +108,7 @@
       "email": "ava.davis@email.com",
       "first_name": "Ava",
       "last_name": "Davis",
-      "password": "pbkdf2_sha256$390000$9wqlSZZMAmTYa3vmmKYzU2$Xi3kN0qzB+Om2qRdC24UbD7lr9CL/IhQEEheE/vCsvU=",
+      "password": "ava.davis@email.com",
       "years_of_experience": 13
     }
   },
@@ -115,7 +120,7 @@
       "email": "lucas.moore@email.com",
       "first_name": "Lucas",
       "last_name": "Moore",
-      "password": "pbkdf2_sha256$390000$9wqlSZZMAmTYa3vmmKYzU2$Xi3kN0qzB+Om2qRdC24UbD7lr9CL/IhQEEheE/vCsvU=",
+      "password": "lucas.moore@email.com",
       "years_of_experience": 27
     }
   },
@@ -127,7 +132,7 @@
       "email": "mia.walker@email.com",
       "first_name": "Mia",
       "last_name": "Walker",
-      "password": "pbkdf2_sha256$320000$73Z1Y57bcoscZ37s9rE9v0$4SEQ0TtXwJKzO5/CRdFSrTifatiPjkZ38gM2H8Kqsdg=",
+      "password": "mia.walker@email.com",
       "years_of_experience": 29
     }
   },
@@ -139,7 +144,7 @@
       "email": "mason.hall@email.com",
       "first_name": "Mason",
       "last_name": "Hall",
-      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l1$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "password": "mason.hall@email.com",
       "years_of_experience": 27
     }
   },
@@ -151,7 +156,7 @@
       "email": "charlotte.thomas@email.com",
       "first_name": "Charlotte",
       "last_name": "Thomas",
-      "password": "pbkdf2_sha256$320000$QtPol3T7x9quBj4BnbnVwW$UwT4kihkRfSvQEWEeuqVKwMgis2ikKVZfJDBcQMvOKY=",
+      "password": "charlotte.thomas@email.com",
       "years_of_experience": 6
     }
   },
@@ -163,7 +168,7 @@
       "email": "noah.lee@email.com",
       "first_name": "Noah",
       "last_name": "Lee",
-      "password": "pbkdf2_sha256$390000$9wqlSZZMAmTYa3vmmKYzU2$Xi3kN0qzB+Om2qRdC24UbD7lr9CL/IhQEEheE/vCsvU=",
+      "password": "noah.lee@email.com",
       "years_of_experience": 9
     }
   },
