@@ -9,10 +9,7 @@ class Cook(AbstractUser):
     years_of_experience = models.IntegerField(
         default=0,
         verbose_name="years of experience",
-        validators=[
-            MinValueValidator(0),
-            MaxValueValidator(50)
-        ]
+        validators=[MinValueValidator(0), MaxValueValidator(50)],
     )
     username = models.CharField(unique=True, max_length=150)
     email = models.EmailField(unique=True, max_length=254)
@@ -27,10 +24,12 @@ class Cook(AbstractUser):
         indexes = [models.Index(fields=["username"])]
 
     def __str__(self) -> str:
-        return (f'Username: "{self.username}"\n'
-                f'First name: "{self.first_name}"\n'
-                f'Last name: "{self.last_name}"'
-                f'Experience: "{self.years_of_experience}" years')
+        return (
+            f'Username: "{self.username}"\n'
+            f'First name: "{self.first_name}"\n'
+            f'Last name: "{self.last_name}"'
+            f'Experience: "{self.years_of_experience}" years'
+        )
 
 
 class DishType(models.Model):
@@ -59,11 +58,12 @@ class Dish(models.Model):
         ordering = (Lower("name"),)
         default_related_name = "dishes"
         indexes = [
-            models.Index(fields=["name"]),
-            models.Index(fields=["price"])
+            models.Index(fields=["name"]), models.Index(fields=["price"])
         ]
 
     def __str__(self) -> str:
-        return (f'Dish name: "{self.name}"\n'
-                f'Type: "{self.dish_type.name}"\n'
-                f'Price: "{self.price}"')
+        return (
+            f'Dish name: "{self.name}"\n'
+            f'Type: "{self.dish_type.name}"\n'
+            f'Price: "{self.price}"'
+        )
