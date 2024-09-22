@@ -3,9 +3,17 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.models import AbstractUser
 from django.db.models.functions import Lower
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.urls import reverse
 
 
 class Cook(AbstractUser):
+    first_name = models.CharField(
+        max_length=150, blank=False, verbose_name="First Name"
+    )
+    last_name = models.CharField(
+        max_length=150, blank=False, verbose_name="Last Name"
+    )
+    email = models.EmailField(blank=False, verbose_name="Email Address")
     years_of_experience = models.IntegerField(
         default=0,
         verbose_name="years of experience",
@@ -13,31 +21,26 @@ class Cook(AbstractUser):
     )
 
     class Meta:
-        verbose_name = "Cook"
-        verbose_name_plural = "Cooks"
         ordering = (Lower("username"),)
         indexes = [models.Index(fields=["username"])]
 
+    def get_absolute_url(self):
+        return reverse("kitchen:cook-detail", kwargs={"pk": self.pk})
+
     def __str__(self) -> str:
-        return (
-            f'Username: "{self.username}"\n'
-            f'First name: "{self.first_name}"\n'
-            f'Last name: "{self.last_name}"'
-            f'Experience: "{self.years_of_experience}" years'
-        )
+        return f'"{self.username}"'
 
 
 class DishType(models.Model):
     name = models.CharField(max_length=255, unique=True)
 
     class Meta:
-        verbose_name = "Dish type"
-        verbose_name_plural = "Dish types"
+        verbose_name_plural = "dish types"
         ordering = (Lower("name"),)
         indexes = [models.Index(fields=["name"])]
 
     def __str__(self) -> str:
-        return f'Dish type: "{self.name}"'
+        return f'dish type: "{self.name}"'
 
 
 class Dish(models.Model):
@@ -48,8 +51,7 @@ class Dish(models.Model):
     cooks = models.ManyToManyField(get_user_model())
 
     class Meta:
-        verbose_name = "Dish"
-        verbose_name_plural = "Dishes"
+        verbose_name_plural = "dishes"
         ordering = (Lower("name"),)
         default_related_name = "dishes"
         indexes = [
@@ -57,8 +59,4 @@ class Dish(models.Model):
         ]
 
     def __str__(self) -> str:
-        return (
-            f'Dish name: "{self.name}"\n'
-            f'Type: "{self.dish_type.name}"\n'
-            f'Price: "{self.price}"'
-        )
+        return f'dish: "{self.name}"\n'
