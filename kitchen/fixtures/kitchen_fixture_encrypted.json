@@ -1,0 +1,1851 @@
+[
+  {
+    "model": "kitchen.cook",
+    "pk": 1,
+    "fields": {
+      "username": "Adm1n_Entry",
+      "email": "admin@email.com",
+      "is_superuser": "True",
+      "is_active": "True",
+      "is_staff": "True",
+      "first_name": "admin_first_name",
+      "last_name": "admin_last_name",
+      "password": "pbkdf2_sha256$870000$9rH4Y1zA0fTs4FI4w2ebKS$lb7KzlogiF8io0+GVNqKVAUP1+Uq+GEgftCuNyTR2AQ=",
+      "years_of_experience": 15
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 2,
+    "fields": {
+      "username": "UsEr_enTrY",
+      "email": "james.smith@email.com",
+      "is_active": "True",
+      "is_staff": "True",
+      "first_name": "James",
+      "last_name": "Smith",
+      "password": "pbkdf2_sha256$870000$tlJxbqM4Hs6ZsFSBxzP6lc$PUg7KEdg6QGzZ4KNAS7trXUMpjoRzPNqLQqTdbUyNBo=",
+      "years_of_experience": 16
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 3,
+    "fields": {
+      "username": "emj_89",
+      "email": "emma.jones@email.com",
+      "first_name": "Emma",
+      "last_name": "Jones",
+      "password": "pbkdf2_sha256$870000$kWGmlTMheoZ08apn4VYsZ6$z2LgYSRGZD2yU0vO3UmHq/ahoXzGqSmAfobuBfd8zIU=",
+      "years_of_experience": 18
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 4,
+    "fields": {
+      "username": "olly2000",
+      "email": "oliver.johnson@email.com",
+      "first_name": "Oliver",
+      "last_name": "Johnson",
+      "password": "pbkdf2_sha256$870000$U6whMBTUxjn6xOAvkzU4Vx$srEM17Nyw69ESwoQCTkQKSE+tLT3OKo11iDU5we5y6U=",
+      "years_of_experience": 10
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 5,
+    "fields": {
+      "username": "izzy_b",
+      "email": "isabella.brown@email.com",
+      "first_name": "Isabella",
+      "last_name": "Brown",
+      "password": "pbkdf2_sha256$870000$ZdJ2RIvgU75aBE3fBnizaV$3ViTfi705GUO94LAEKFOjy7Epez4K+E3zLgG838AZyE=",
+      "years_of_experience": 28
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 6,
+    "fields": {
+      "username": "liam_wil",
+      "email": "liam.wilson@email.com",
+      "first_name": "Liam",
+      "last_name": "Wilson",
+      "password": "pbkdf2_sha256$870000$7NvEhw3fnB0ESJQxX8Z2JN$OPrSQmx/heEq8CMngcZIebTllFOyVedaWa7KXRNVCNo=",
+      "years_of_experience": 18
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 7,
+    "fields": {
+      "username": "soph_456",
+      "email": "sophia.martin@email.com",
+      "first_name": "Sophia",
+      "last_name": "Martin",
+      "password": "pbkdf2_sha256$870000$7neaNKWup87V4kFjjIthlg$Cg/iLVNlnN7WXTG50/1N9YrNl1/YjTaV5whiopfjY48=",
+      "years_of_experience": 30
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 8,
+    "fields": {
+      "username": "ethan99",
+      "email": "ethan.miller@email.com",
+      "first_name": "Ethan",
+      "last_name": "Miller",
+      "password": "pbkdf2_sha256$870000$L95gtFy4RaiPOib2uOrHSn$RfLJBnYbCEcy1EpJg18ZmjaO/G4HB/dm7C8nBQxxnow=",
+      "years_of_experience": 15
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 9,
+    "fields": {
+      "username": "ava_ava",
+      "email": "ava.davis@email.com",
+      "first_name": "Ava",
+      "last_name": "Davis",
+      "password": "pbkdf2_sha256$870000$u0KyaV7mSEewmjKHEgttpp$UiQlHEDTX3O91wEnAwLVtII4lxnS0/8xwhgOksUIj24=",
+      "years_of_experience": 13
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 10,
+    "fields": {
+      "username": "lucaM_",
+      "email": "lucas.moore@email.com",
+      "first_name": "Lucas",
+      "last_name": "Moore",
+      "password": "pbkdf2_sha256$870000$0WJhnjEaH7H1BHIqxUH6sx$SrSyi8lRKHLe94Oc113EPPNQiYaXdLMGjoLQUZupS2U=",
+      "years_of_experience": 27
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 11,
+    "fields": {
+      "username": "mia_mw",
+      "email": "mia.walker@email.com",
+      "first_name": "Mia",
+      "last_name": "Walker",
+      "password": "pbkdf2_sha256$870000$fCkvEwRY8g0MU9CHuWzMoi$8yQHuwHNw9I0JkLVVWpfKHSf11yq5qfd5AXXcMtkl5g=",
+      "years_of_experience": 29
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 12,
+    "fields": {
+      "username": "mason_hall3",
+      "email": "mason.hall@email.com",
+      "first_name": "Mason",
+      "last_name": "Hall",
+      "password": "pbkdf2_sha256$870000$HXhO8lzUnUCju9ugr8frfM$9cr5PLuDcAdjrgapO3QlcKlgaBASUStM/myRjhpNr+I=",
+      "years_of_experience": 27
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 13,
+    "fields": {
+      "username": "char_thom",
+      "email": "charlotte.thomas@email.com",
+      "first_name": "Charlotte",
+      "last_name": "Thomas",
+      "password": "pbkdf2_sha256$870000$EcmFshXrKFQJBgApZ1GpIS$qFjt2n5qFcBajwc2F1M80+/7qARKg/NCmplf2yiZZXE=",
+      "years_of_experience": 6
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 14,
+    "fields": {
+      "username": "wils_l",
+      "email": "noah.lee@email.com",
+      "first_name": "Noah",
+      "last_name": "Lee",
+      "password": "pbkdf2_sha256$870000$1vrw6HKKEgYYFTbFNXdRKS$2ttIB/MCAXyAvqQkFkOsoP+j44s9DLaNUY9cADYBCvQ=",
+      "years_of_experience": 9
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 1,
+    "fields": {
+      "name": "Biscuits"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 2,
+    "fields": {
+      "name": "Braai"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 3,
+    "fields": {
+      "name": "Bread"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 4,
+    "fields": {
+      "name": "Pizza"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 5,
+    "fields": {
+      "name": "Pasta"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 6,
+    "fields": {
+      "name": "Salad"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 7,
+    "fields": {
+      "name": "Soup"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 8,
+    "fields": {
+      "name": "Sandwiches"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 9,
+    "fields": {
+      "name": "Dessert"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 10,
+    "fields": {
+      "name": "Cakes"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 11,
+    "fields": {
+      "name": "Grill"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 12,
+    "fields": {
+      "name": "Seafood"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 13,
+    "fields": {
+      "name": "Vegetarian"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 14,
+    "fields": {
+      "name": "Drinks"
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 1,
+    "fields": {
+      "name": "Grilled Pork Shashlik",
+      "description": "Marinated pork skewers grilled to perfection with a smoky flavor",
+      "price": "6.45",
+      "dish_type": 11
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 2,
+    "fields": {
+      "name": "Grilled Chicken Kyiv",
+      "description": "Chicken breast stuffed with garlic butter, breaded, and grilled",
+      "price": "5.89",
+      "dish_type": 11
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 3,
+    "fields": {
+      "name": "Chicken Schnitzel Sandwich",
+      "description": "Crispy chicken schnitzel with lettuce, tomato, and mayo on a fresh bun",
+      "price": "4.89",
+      "dish_type": 8
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 4,
+    "fields": {
+      "name": "Olivier Salad",
+      "description": "A traditional potato salad with boiled vegetables, eggs, pickles, and meat, all mixed with mayonnaise",
+      "price": "3.53",
+      "dish_type": 6
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 5,
+    "fields": {
+      "name": "Salmon Bagel",
+      "description": "Smoked salmon with cream cheese, capers, and red onion on a toasted bagel",
+      "price": "5.47",
+      "dish_type": 8
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 6,
+    "fields": {
+      "name": "Caprese Sandwich",
+      "description": "Fresh mozzarella, tomatoes, basil, and balsamic glaze on ciabatta",
+      "price": "4.65",
+      "dish_type": 8
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 7,
+    "fields": {
+      "name": "Vegetarian Borscht",
+      "description": "A meatless version of the traditional beet soup with vegetables and aromatic herbs",
+      "price": "4.32",
+      "dish_type": 13
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 8,
+    "fields": {
+      "name": "Kyiv Cake",
+      "description": "A classic Ukrainian cake with layers of sponge, meringue, hazelnuts, and buttercream",
+      "price": "5.67",
+      "dish_type": 9
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 9,
+    "fields": {
+      "name": "Horilka",
+      "description": "A traditional Ukrainian vodka made from wheat, known for its strong flavor",
+      "price": "3.45",
+      "dish_type": 14
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 10,
+    "fields": {
+      "name": "Grilled Trout",
+      "description": "Fresh trout seasoned with herbs and grilled to a crispy finish",
+      "price": "7.34",
+      "dish_type": 11
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 11,
+    "fields": {
+      "name": "Shashlik",
+      "description": "Marinated meat skewers, typically made with pork, beef, or chicken, grilled over an open flame",
+      "price": "1.78",
+      "dish_type": 2
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 12,
+    "fields": {
+      "name": "Monastic Hut Cake",
+      "description": "A triangular cake with cherry-filled tubes and whipped sour cream",
+      "price": "6.12",
+      "dish_type": 10
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 13,
+    "fields": {
+      "name": "Grilled Black Sea Mussels",
+      "description": "Fresh mussels from the Black Sea, grilled with garlic butter and herbs",
+      "price": "6.78",
+      "dish_type": 12
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 14,
+    "fields": {
+      "name": "Syrnyky",
+      "description": "Fluffy cottage cheese pancakes often served with sour cream and jam",
+      "price": "3.45",
+      "dish_type": 9
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 15,
+    "fields": {
+      "name": "Nalysnyky",
+      "description": "Ukrainian crepes filled with sweet cottage cheese or fruit",
+      "price": "4.12",
+      "dish_type": 9
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 16,
+    "fields": {
+      "name": "Kovbasa",
+      "description": "Traditional Ukrainian sausages, often grilled and served with mustard or horseradish",
+      "price": "1.39",
+      "dish_type": 2
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 17,
+    "fields": {
+      "name": "Borscht",
+      "description": "A traditional beet soup with meat or bone broth, vegetables, and a dollop of sour cream",
+      "price": "4.75",
+      "dish_type": 7
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 18,
+    "fields": {
+      "name": "Roast Beef Sandwich",
+      "description": "Thinly sliced roast beef with horseradish sauce and arugula on rye bread",
+      "price": "5.12",
+      "dish_type": 8
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 19,
+    "fields": {
+      "name": "Medovukha",
+      "description": "A honey-based alcoholic beverage, similar to mead, with a smooth, sweet taste",
+      "price": "4.12",
+      "dish_type": 14
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 20,
+    "fields": {
+      "name": "Banoffee Pie",
+      "description": "A British dessert pie made with layers of bananas, caramel, whipped cream, and often chocolate or coffee. Served in a crispy biscuit crust",
+      "price": "4.99",
+      "dish_type": 1
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 21,
+    "fields": {
+      "name": "Varenyky with Potatoes",
+      "description": "Ukrainian dumplings filled with mashed potatoes and onions",
+      "price": "3.78",
+      "dish_type": 13
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 22,
+    "fields": {
+      "name": "Drunken Cherry Cake",
+      "description": "Chocolate ganache, sponge layers, and pitted cherries soaked in vodka",
+      "price": "5.89",
+      "dish_type": 10
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 23,
+    "fields": {
+      "name": "DIY pizza",
+      "description": "Tomato sauce and mozzarella cheese",
+      "price": "4.08",
+      "dish_type": 4
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 24,
+    "fields": {
+      "name": "Lula Kebab",
+      "description": "Ground meat kebabs, usually made with lamb or beef, mixed with spices and grilled",
+      "price": "1.56",
+      "dish_type": 2
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 25,
+    "fields": {
+      "name": "Kapusniak",
+      "description": "A hearty sauerkraut soup with a rich meat broth",
+      "price": "4.32",
+      "dish_type": 7
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 26,
+    "fields": {
+      "name": "Vinaigrette Salad",
+      "description": "A colorful beetroot salad with potatoes, carrots, pickles, and peas, dressed with sunflower oil",
+      "price": "3.41",
+      "dish_type": 6
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 27,
+    "fields": {
+      "name": "Deruny",
+      "description": "Crispy potato pancakes served with sour cream",
+      "price": "3.45",
+      "dish_type": 13
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 28,
+    "fields": {
+      "name": "Green Borscht",
+      "description": "A refreshing sorrel soup with eggs and sour cream",
+      "price": "3.89",
+      "dish_type": 7
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 29,
+    "fields": {
+      "name": "Stuffed Peppers",
+      "description": "Bell peppers stuffed with rice, vegetables, and herbs",
+      "price": "4.89",
+      "dish_type": 13
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 30,
+    "fields": {
+      "name": "Grilled Vegetables",
+      "description": "A mix of seasonal vegetables like bell peppers, zucchini, and eggplant, grilled to perfection",
+      "price": "1.1",
+      "dish_type": 2
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 31,
+    "fields": {
+      "name": "Solyanka",
+      "description": "A spicy and sour soup made with meat, pickles, and olives",
+      "price": "5.21",
+      "dish_type": 7
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 32,
+    "fields": {
+      "name": "Chicken Wings",
+      "description": "Marinated chicken wings, grilled until crispy and flavorful",
+      "price": "0.79",
+      "dish_type": 2
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 33,
+    "fields": {
+      "name": "Kvas",
+      "description": "A traditional fermented drink made from rye bread, known for its refreshing taste",
+      "price": "2.78",
+      "dish_type": 14
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 34,
+    "fields": {
+      "name": "Kompot",
+      "description": "A sweet drink made by simmering a mixture of dried and fresh fruits",
+      "price": "2.34",
+      "dish_type": 14
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 35,
+    "fields": {
+      "name": "Sacher Torte",
+      "description": "A rich, dense chocolate cake from Austria, filled with a layer of apricot jam and coated in dark chocolate glaze",
+      "price": "6",
+      "dish_type": 1
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 36,
+    "fields": {
+      "name": "Spaghetti Carbonara",
+      "description": "Classic Italian pasta with a creamy sauce made from eggs, cheese, pancetta, and pepper",
+      "price": "6",
+      "dish_type": 5
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 37,
+    "fields": {
+      "name": "palyanytsya",
+      "description": "A traditional Ukrainian round bread with a soft, fluffy texture and a slightly crispy crust",
+      "price": "0.99",
+      "dish_type": 3
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 38,
+    "fields": {
+      "name": "Pain au Chocolat",
+      "description": "A buttery, flaky pastry similar to a croissant but filled with rich dark chocolate. Popular in French bakeries",
+      "price": "2.99",
+      "dish_type": 1
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 39,
+    "fields": {
+      "name": "Mushroom Julienne",
+      "description": "Baked mushrooms in a creamy sauce with cheese",
+      "price": "4.56",
+      "dish_type": 13
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 40,
+    "fields": {
+      "name": "Pork Ribs",
+      "description": "Tender pork ribs, marinated and slow-cooked on the grill",
+      "price": "2.33",
+      "dish_type": 2
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 41,
+    "fields": {
+      "name": "Varenyky with Cherries",
+      "description": "Dumplings filled with sweet cherries and served with sour cream",
+      "price": "3.89",
+      "dish_type": 9
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 42,
+    "fields": {
+      "name": "Falafel Wrap",
+      "description": "Crispy falafel with hummus, lettuce, tomato, and tahini sauce in a wrap",
+      "price": "4.33",
+      "dish_type": 8
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 43,
+    "fields": {
+      "name": "kalach",
+      "description": "A festive braided bread, usually enjoyed during holidays and special occasions",
+      "price": "1",
+      "dish_type": 3
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 44,
+    "fields": {
+      "name": "Pampushky",
+      "description": "Small, round bread rolls, often served with garlic and dill, typically accompanying borscht",
+      "price": "47.64",
+      "dish_type": 3
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 45,
+    "fields": {
+      "name": "Ant Hill Cake",
+      "description": "A cake made with poppy seeds and condensed milk, shaped like an ant hill",
+      "price": "4.78",
+      "dish_type": 10
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 46,
+    "fields": {
+      "name": "Quattro Di Carne",
+      "description": "Pomodoro sauce, Mozzarella cheese, bacon, salami, ham, hunting sausages, garlic oil, greenery and italian herbs",
+      "price": "6.25",
+      "dish_type": 4
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 47,
+    "fields": {
+      "name": "Cabbage Rolls",
+      "description": "Cabbage leaves stuffed with rice and vegetables, baked in tomato sauce",
+      "price": "4.12",
+      "dish_type": 13
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 48,
+    "fields": {
+      "name": "Grilled Lamb Chops",
+      "description": "Tender lamb chops marinated in spices and grilled",
+      "price": "8.12",
+      "dish_type": 11
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 49,
+    "fields": {
+      "name": "BLT Sandwich",
+      "description": "Bacon, lettuce, and tomato with mayo on toasted white bread",
+      "price": "4.78",
+      "dish_type": 8
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 50,
+    "fields": {
+      "name": "Egg Salad Sandwich",
+      "description": "Creamy egg salad with lettuce on whole grain bread",
+      "price": "3.95",
+      "dish_type": 8
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 51,
+    "fields": {
+      "name": "Greek Salad",
+      "description": "A fresh mix of tomatoes, cucumbers, bell peppers, onions, olives, and feta cheese, dressed with olive oil.",
+      "price": "4.39",
+      "dish_type": 6
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 52,
+    "fields": {
+      "name": "Mushroom",
+      "description": "Mustard sauce, mozzarella cheese, porcine mushrooms, green onions.",
+      "price": "5.4",
+      "dish_type": 4
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 53,
+    "fields": {
+      "name": "Grilled Fish",
+      "description": "Fresh fish, often carp or trout, seasoned and grilled whole",
+      "price": "2.89",
+      "dish_type": 2
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 54,
+    "fields": {
+      "name": "Four cheeses",
+      "description": "Cream sauce, Mozzarella cheese, Dor Blue cheese, Feta cheese, Parmesan cheese and italian herbs",
+      "price": "7.69",
+      "dish_type": 4
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 55,
+    "fields": {
+      "name": "Mushroom Yushka",
+      "description": "A thick mushroom soup with onions, carrots, and earthy mushrooms",
+      "price": "4.47",
+      "dish_type": 7
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 56,
+    "fields": {
+      "name": "Turkey Club Sandwich",
+      "description": "Turkey, bacon, lettuce, tomato, and mayo on toasted bread",
+      "price": "5.34",
+      "dish_type": 8
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 57,
+    "fields": {
+      "name": "Uzvar",
+      "description": "A traditional compote made from dried fruits, often served during Christmas",
+      "price": "2.89",
+      "dish_type": 14
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 58,
+    "fields": {
+      "name": "Nalyvka",
+      "description": "A homemade fruit or berry wine, often fortified with sugar and sometimes vodka",
+      "price": "3.67",
+      "dish_type": 14
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 59,
+    "fields": {
+      "name": "Grilled Vegetable Skewers",
+      "description": "A mix of seasonal vegetables grilled with a hint of olive oil and herbs",
+      "price": "4.78",
+      "dish_type": 11
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 60,
+    "fields": {
+      "name": "Rozsolnyk",
+      "description": "A tangy soup with barley or rice and pickled cucumbers.",
+      "price": "3.95",
+      "dish_type": 7
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 61,
+    "fields": {
+      "name": "Mushroom Skewers",
+      "description": "Skewers of marinated mushrooms, grilled and served as a vegetarian option",
+      "price": "0.99",
+      "dish_type": 2
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 62,
+    "fields": {
+      "name": "Grilled Corn",
+      "description": "Whole ears of corn, grilled and often brushed with butter and herbs",
+      "price": "0.7",
+      "dish_type": 2
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 63,
+    "fields": {
+      "name": "Penne Arrabbiata",
+      "description": "Penne pasta served with a spicy tomato sauce, flavored with garlic, chili peppers, and olive oil",
+      "price": "6.09",
+      "dish_type": 5
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 64,
+    "fields": {
+      "name": "Caesar Salad",
+      "description": "Romaine lettuce with grilled chicken, croutons, Parmesan cheese, and Caesar dressing",
+      "price": "5.63",
+      "dish_type": 6
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 65,
+    "fields": {
+      "name": "Poppy Seed Roll",
+      "description": "A sweet roll filled with a generous layer of poppy seeds",
+      "price": "4.34",
+      "dish_type": 10
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 66,
+    "fields": {
+      "name": "Carbonara",
+      "description": "Mustard sauce and Carbonara sauce, mozzarella cheese, crispy bacon, juicy ham, onion and parmesan cheese, garlic oil",
+      "price": "6.25",
+      "dish_type": 4
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 67,
+    "fields": {
+      "name": "Grilled Cheese Sandwich",
+      "description": "Melted cheese between two slices of buttery grilled bread",
+      "price": "3.67",
+      "dish_type": 8
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 68,
+    "fields": {
+      "name": "Ryazhenka",
+      "description": "A fermented milk drink similar to yogurt, made from baked milk",
+      "price": "2.45",
+      "dish_type": 14
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 69,
+    "fields": {
+      "name": "Korovai",
+      "description": "A decorative, ceremonial bread often used in weddings, symbolizing prosperity and good fortune",
+      "price": "1.51",
+      "dish_type": 3
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 70,
+    "fields": {
+      "name": "Grilled Cheese",
+      "description": "Thick slices of cheese, grilled until golden and slightly melted",
+      "price": "1.49",
+      "dish_type": 2
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 71,
+    "fields": {
+      "name": "Bohrach",
+      "description": "A robust beef soup with tomatoes, red bell peppers, and paprika",
+      "price": "5.34",
+      "dish_type": 7
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 72,
+    "fields": {
+      "name": "Barbecue Potatoes",
+      "description": "Potatoes wrapped in foil and grilled, often seasoned with garlic and herbs",
+      "price": "0.89",
+      "dish_type": 2
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 73,
+    "fields": {
+      "name": "Baked Carp",
+      "description": "Whole carp baked with lemon, dill, and a touch of white wine",
+      "price": "7.45",
+      "dish_type": 12
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 74,
+    "fields": {
+      "name": "Bavarian",
+      "description": "Mustard and tomato sauce, mozzarella, hunting sausages, homemade sausages, pickled cucumbers, parsley, caramelized onions, burger sauce",
+      "price": "5.52",
+      "dish_type": 4
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 75,
+    "fields": {
+      "name": "Krupnyk",
+      "description": "A barley soup with vegetables and smoked sausage",
+      "price": "4.58",
+      "dish_type": 7
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 76,
+    "fields": {
+      "name": "Prague Cake",
+      "description": "A rich chocolate cake with layers of chocolate sponge and chocolate buttercream",
+      "price": "5.43",
+      "dish_type": 10
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 77,
+    "fields": {
+      "name": "Kutia",
+      "description": "A traditional Christmas dessert made with wheat berries, honey, and poppy seeds",
+      "price": "3.21",
+      "dish_type": 9
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 78,
+    "fields": {
+      "name": "Ham and Cheese Croissant",
+      "description": "Ham and Swiss cheese in a flaky croissant",
+      "price": "4.22",
+      "dish_type": 8
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 79,
+    "fields": {
+      "name": "Meat boom!",
+      "description": "Tomato sauce, mozzarella cheese, bacon, chicken fillet, pork, veal, garlic oil, parsley",
+      "price": "6.61",
+      "dish_type": 4
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 80,
+    "fields": {
+      "name": "Pumpkin Risotto",
+      "description": "Creamy risotto made with pumpkin and Parmesan cheese",
+      "price": "5.21",
+      "dish_type": 13
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 81,
+    "fields": {
+      "name": "Shuba (Herring Under a Fur Coat)",
+      "description": "Layers of herring, potatoes, carrots, beets, and mayonnaise, creating a rich and flavorful salad",
+      "price": "4.17",
+      "dish_type": 6
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 82,
+    "fields": {
+      "name": "Medivnyk",
+      "description": "A honey cake with a rich, spiced flavor",
+      "price": "4.56",
+      "dish_type": 9
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 83,
+    "fields": {
+      "name": "Vegetarian Panini",
+      "description": "Grilled vegetables with pesto and mozzarella on ciabatta",
+      "price": "4.99",
+      "dish_type": 8
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 84,
+    "fields": {
+      "name": "Fettuccine Alfredo",
+      "description": "Fettuccine pasta tossed in a rich and creamy Alfredo sauce made with butter, heavy cream, and Parmesan cheese",
+      "price": "7.21",
+      "dish_type": 5
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 85,
+    "fields": {
+      "name": "Caprese Salad",
+      "description": "Slices of fresh tomatoes and mozzarella, topped with basil leaves and drizzled with balsamic glaze",
+      "price": "5.14",
+      "dish_type": 6
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 86,
+    "fields": {
+      "name": "Napoleon Cake",
+      "description": "A layered pastry cake with custard filling, known for its flaky texture",
+      "price": "6.15",
+      "dish_type": 10
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 87,
+    "fields": {
+      "name": "Zavarnoy Bread",
+      "description": "A type of rye bread made with scalded flour, giving it a unique texture and flavor",
+      "price": "0.75",
+      "dish_type": 3
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 88,
+    "fields": {
+      "name": "Crème Brûlée Tart",
+      "description": "A delicate tart with a smooth vanilla custard filling, topped with caramelized sugar for a crunchy texture",
+      "price": "4.49",
+      "dish_type": 1
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 89,
+    "fields": {
+      "name": "Lasagna Bolognese",
+      "description": "Layers of pasta, Bolognese sauce, béchamel, and cheese, baked to perfection",
+      "price": "7",
+      "dish_type": 5
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 90,
+    "fields": {
+      "name": "Pesto Pasta",
+      "description": "Pasta mixed with a fresh pesto sauce made from basil, garlic, pine nuts, Parmesan cheese, and olive oil",
+      "price": "6.53",
+      "dish_type": 5
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 91,
+    "fields": {
+      "name": "Pumpkin Soup",
+      "description": "A creamy soup made with fresh pumpkin and spices",
+      "price": "4.12",
+      "dish_type": 7
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 92,
+    "fields": {
+      "name": "Verhovyna Bean Soup",
+      "description": "A soup with beans, sauerkraut, and smoked sausage",
+      "price": "4.83",
+      "dish_type": 7
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 93,
+    "fields": {
+      "name": "Varenukha",
+      "description": "A traditional hot drink made with vodka, dried fruits, honey, and spices",
+      "price": "3.89",
+      "dish_type": 14
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 94,
+    "fields": {
+      "name": "Seafood Linguine",
+      "description": "Linguine pasta served with a variety of seafood like shrimp, mussels, and calamari, in a light garlic and white wine sauce",
+      "price": "8.31",
+      "dish_type": 5
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 95,
+    "fields": {
+      "name": "Eggplant Caviar",
+      "description": "A spread made from roasted eggplants, tomatoes, and peppers",
+      "price": "3.67",
+      "dish_type": 13
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 96,
+    "fields": {
+      "name": "Oladyi",
+      "description": "Small, fluffy pancakes often served with honey or jam",
+      "price": "3.78",
+      "dish_type": 9
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 97,
+    "fields": {
+      "name": "Sochniki",
+      "description": "Soft pastries filled with sweet cottage cheese, often enjoyed with tea or coffee",
+      "price": "3.67",
+      "dish_type": 9
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 126,
+    "fields": {
+      "dish": 35,
+      "cook": 2
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 127,
+    "fields": {
+      "dish": 31,
+      "cook": 2
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 128,
+    "fields": {
+      "dish": 11,
+      "cook": 2
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 129,
+    "fields": {
+      "dish": 61,
+      "cook": 2
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 130,
+    "fields": {
+      "dish": 2,
+      "cook": 2
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 131,
+    "fields": {
+      "dish": 51,
+      "cook": 2
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 132,
+    "fields": {
+      "dish": 36,
+      "cook": 2
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 133,
+    "fields": {
+      "dish": 63,
+      "cook": 3
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 134,
+    "fields": {
+      "dish": 44,
+      "cook": 3
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 135,
+    "fields": {
+      "dish": 34,
+      "cook": 3
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 136,
+    "fields": {
+      "dish": 77,
+      "cook": 3
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 137,
+    "fields": {
+      "dish": 60,
+      "cook": 3
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 138,
+    "fields": {
+      "dish": 23,
+      "cook": 3
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 139,
+    "fields": {
+      "dish": 87,
+      "cook": 3
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 140,
+    "fields": {
+      "dish": 32,
+      "cook": 4
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 141,
+    "fields": {
+      "dish": 61,
+      "cook": 4
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 142,
+    "fields": {
+      "dish": 79,
+      "cook": 4
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 143,
+    "fields": {
+      "dish": 1,
+      "cook": 4
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 144,
+    "fields": {
+      "dish": 17,
+      "cook": 4
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 145,
+    "fields": {
+      "dish": 25,
+      "cook": 4
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 146,
+    "fields": {
+      "dish": 91,
+      "cook": 5
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 147,
+    "fields": {
+      "dish": 31,
+      "cook": 5
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 148,
+    "fields": {
+      "dish": 22,
+      "cook": 5
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 149,
+    "fields": {
+      "dish": 42,
+      "cook": 5
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 150,
+    "fields": {
+      "dish": 18,
+      "cook": 5
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 151,
+    "fields": {
+      "dish": 49,
+      "cook": 6
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 152,
+    "fields": {
+      "dish": 43,
+      "cook": 6
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 153,
+    "fields": {
+      "dish": 44,
+      "cook": 6
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 154,
+    "fields": {
+      "dish": 38,
+      "cook": 6
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 155,
+    "fields": {
+      "dish": 84,
+      "cook": 6
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 156,
+    "fields": {
+      "dish": 48,
+      "cook": 6
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 157,
+    "fields": {
+      "dish": 57,
+      "cook": 6
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 158,
+    "fields": {
+      "dish": 28,
+      "cook": 7
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 159,
+    "fields": {
+      "dish": 92,
+      "cook": 7
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 160,
+    "fields": {
+      "dish": 65,
+      "cook": 7
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 161,
+    "fields": {
+      "dish": 47,
+      "cook": 7
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 162,
+    "fields": {
+      "dish": 80,
+      "cook": 8
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 163,
+    "fields": {
+      "dish": 36,
+      "cook": 8
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 164,
+    "fields": {
+      "dish": 32,
+      "cook": 8
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 165,
+    "fields": {
+      "dish": 96,
+      "cook": 8
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 166,
+    "fields": {
+      "dish": 75,
+      "cook": 8
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 167,
+    "fields": {
+      "dish": 97,
+      "cook": 8
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 168,
+    "fields": {
+      "dish": 29,
+      "cook": 8
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 169,
+    "fields": {
+      "dish": 86,
+      "cook": 9
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 170,
+    "fields": {
+      "dish": 72,
+      "cook": 9
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 171,
+    "fields": {
+      "dish": 73,
+      "cook": 9
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 172,
+    "fields": {
+      "dish": 41,
+      "cook": 9
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 173,
+    "fields": {
+      "dish": 34,
+      "cook": 9
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 174,
+    "fields": {
+      "dish": 43,
+      "cook": 9
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 175,
+    "fields": {
+      "dish": 24,
+      "cook": 9
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 176,
+    "fields": {
+      "dish": 22,
+      "cook": 10
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 177,
+    "fields": {
+      "dish": 86,
+      "cook": 10
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 178,
+    "fields": {
+      "dish": 59,
+      "cook": 10
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 179,
+    "fields": {
+      "dish": 20,
+      "cook": 10
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 180,
+    "fields": {
+      "dish": 83,
+      "cook": 10
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 181,
+    "fields": {
+      "dish": 12,
+      "cook": 10
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 182,
+    "fields": {
+      "dish": 87,
+      "cook": 11
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 183,
+    "fields": {
+      "dish": 95,
+      "cook": 11
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 184,
+    "fields": {
+      "dish": 12,
+      "cook": 11
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 185,
+    "fields": {
+      "dish": 19,
+      "cook": 12
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 186,
+    "fields": {
+      "dish": 77,
+      "cook": 12
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 187,
+    "fields": {
+      "dish": 8,
+      "cook": 12
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 188,
+    "fields": {
+      "dish": 87,
+      "cook": 12
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 189,
+    "fields": {
+      "dish": 94,
+      "cook": 13
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 190,
+    "fields": {
+      "dish": 34,
+      "cook": 13
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 191,
+    "fields": {
+      "dish": 27,
+      "cook": 13
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 192,
+    "fields": {
+      "dish": 38,
+      "cook": 13
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 193,
+    "fields": {
+      "dish": 50,
+      "cook": 13
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 194,
+    "fields": {
+      "dish": 68,
+      "cook": 13
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 195,
+    "fields": {
+      "dish": 43,
+      "cook": 13
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 196,
+    "fields": {
+      "dish": 4,
+      "cook": 14
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 197,
+    "fields": {
+      "dish": 84,
+      "cook": 14
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 198,
+    "fields": {
+      "dish": 94,
+      "cook": 14
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 199,
+    "fields": {
+      "dish": 72,
+      "cook": 14
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 200,
+    "fields": {
+      "dish": 69,
+      "cook": 14
+    }
+  },
+  {
+    "model": "kitchen.dish_cooks",
+    "pk": 201,
+    "fields": {
+      "dish": 90,
+      "cook": 14
+    }
+  }
+]
