@@ -19,7 +19,7 @@ class DishByDishTypeAdminFilter(admin.SimpleListFilter):
 
 
 class CookByYearsOfExperienceAdminFilter(admin.SimpleListFilter):
-    title = _("Experience")
+    title = _("experience")
     parameter_name = "year"
 
     def lookups(self, request, model_admin):
