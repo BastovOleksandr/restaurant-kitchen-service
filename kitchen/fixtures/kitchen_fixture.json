@@ -3,14 +3,14 @@
     "model": "kitchen.cook",
     "pk": 1,
     "fields": {
-      "username": "admin",
+      "username": "Adm1n_Entry",
       "email": "admin@email.com",
       "is_superuser": "True",
       "is_active": "True",
       "is_staff": "True",
       "first_name": "admin_first_name",
       "last_name": "admin_last_name",
-      "password": "admin",
+      "password": "sEcuRe_paSS",
       "years_of_experience": 15
     }
   },
@@ -18,13 +18,13 @@
     "model": "kitchen.cook",
     "pk": 2,
     "fields": {
-      "username": "user",
+      "username": "UsEr_enTrY",
       "email": "james.smith@email.com",
       "is_active": "True",
       "is_staff": "True",
       "first_name": "James",
       "last_name": "Smith",
-      "password": "user",
+      "password": "UseR_PaSs",
       "years_of_experience": 16
     }
   },
