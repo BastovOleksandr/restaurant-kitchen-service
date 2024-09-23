@@ -13,7 +13,6 @@ class BaseSearchByNameForm(forms.ModelForm):
         self.fields["name"].widget.attrs.update(
             {
                 "max_length": self.fields["name"].max_length,
-                "size": 80,
                 "placeholder": "Search by name",
             }
         )
