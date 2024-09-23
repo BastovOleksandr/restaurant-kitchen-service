@@ -39,7 +39,10 @@ class AdminSiteTests(TestCase):
     def test_cook_additional_fields_on_create_page(self):
         url = reverse("admin:kitchen_cook_add")
         additional_fields = [
-            "first_name", "last_name", "years_of_experience", "email"
+            "first_name",
+            "last_name",
+            "years_of_experience",
+            "email"
         ]
 
         response = self.client.get(url)
