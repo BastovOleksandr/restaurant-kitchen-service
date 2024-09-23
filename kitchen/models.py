@@ -59,4 +59,4 @@ class Dish(models.Model):
         ]
 
     def __str__(self) -> str:
-        return f'dish: "{self.name}"\n'
+        return f'dish: "{self.name}"'
