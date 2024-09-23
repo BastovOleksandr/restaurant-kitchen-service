@@ -1,8 +1,14 @@
-body {
-    margin-top: 20px;
+.nav li {
+    position: relative;
 }
 
-.link-to-page {
-    float: right;
-    margin: 0 2px 0 2px;
+.nav li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 1px;
+    background-color: #ccc;
 }
