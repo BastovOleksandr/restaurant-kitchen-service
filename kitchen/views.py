@@ -43,8 +43,6 @@ class BaseDeleteView(LoginRequiredMixin, generic.DeleteView):
     class Meta:
         abstract = True
 
-
-@login_required
 def index(request):
     context = {
         "num_cooks": Cook.objects.count(),
