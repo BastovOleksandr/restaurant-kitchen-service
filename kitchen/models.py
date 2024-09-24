@@ -8,12 +8,12 @@ from django.urls import reverse
 
 class Cook(AbstractUser):
     first_name = models.CharField(
-        max_length=150, blank=False, verbose_name="First Name"
+        max_length=150, verbose_name="First Name"
     )
     last_name = models.CharField(
-        max_length=150, blank=False, verbose_name="Last Name"
+        max_length=150, verbose_name="Last Name"
     )
-    email = models.EmailField(blank=False, verbose_name="Email Address")
+    email = models.EmailField(verbose_name="Email Address")
     years_of_experience = models.IntegerField(
         default=0,
         verbose_name="years of experience",
@@ -22,7 +22,6 @@ class Cook(AbstractUser):
 
     class Meta:
         ordering = (Lower("username"),)
-        indexes = [models.Index(fields=["username"])]
 
     def get_absolute_url(self):
         return reverse("kitchen:cook-detail", kwargs={"pk": self.pk})
@@ -37,7 +36,6 @@ class DishType(models.Model):
     class Meta:
         verbose_name_plural = "dish types"
         ordering = (Lower("name"),)
-        indexes = [models.Index(fields=["name"])]
 
     def __str__(self) -> str:
         return f'dish type: "{self.name}"'
@@ -55,7 +53,7 @@ class Dish(models.Model):
         ordering = (Lower("name"),)
         default_related_name = "dishes"
         indexes = [
-            models.Index(fields=["name"]), models.Index(fields=["price"])
+            models.Index(fields=["price"])
         ]
 
     def __str__(self) -> str:
