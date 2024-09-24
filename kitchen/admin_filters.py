@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.db.models import Q
 from django.utils.translation import gettext_lazy as _
 
 from kitchen.models import DishType
@@ -29,13 +28,16 @@ class CookByYearsOfExperienceAdminFilter(admin.SimpleListFilter):
             15: "10-15",
             20: "20+",
         }
-        return [(years, _(title + " years")) for years, title in filter_.items()]
+        return [
+            (years, _(title + " years")) for years, title in filter_.items()
+        ]
 
     def queryset(self, request, queryset):
         if self.value():
             year = int(self.value())
             return queryset.filter(
-                Q(years_of_experience__gte=year - 5)
-                & Q(years_of_experience__lte=year - 1)
+                years_of_experience__gte=year - 5,
+            ).filter(
+                years_of_experience__lte=year - 1
             )
         return queryset
