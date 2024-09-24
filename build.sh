@@ -12,4 +12,4 @@ python manage.py collectstatic --no-input
 python manage.py migrate
 
 # Load fixtures
-python manage.py fixture.json
+python manage.py loaddata fixture.json
