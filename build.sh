@@ -12,4 +12,4 @@ python manage.py collectstatic --no-input
 python manage.py migrate
 
 # Load fixtures
-python manage.py loaddata kitchen_fixture_encrypted_passwords.json
+python manage.py fixture.json
