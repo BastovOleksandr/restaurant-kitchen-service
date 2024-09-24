@@ -2,13 +2,12 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import Group
 
-from kitchen.models import Cook, DishType, Dish
-from kitchen import admin_filters
+from kitchen import admin_filters, models
 
 admin.site.unregister(Group)
 
 
-@admin.register(Cook)
+@admin.register(models.Cook)
 class CookAdmin(UserAdmin):
     search_fields = [
         "last_name",
@@ -41,7 +40,7 @@ class CookAdmin(UserAdmin):
     )
 
 
-@admin.register(DishType)
+@admin.register(models.DishType)
 class DishTypeAdmin(admin.ModelAdmin):
     search_fields = [
         "name",
@@ -51,7 +50,7 @@ class DishTypeAdmin(admin.ModelAdmin):
     ]
 
 
-@admin.register(Dish)
+@admin.register(models.Dish)
 class DishAdmin(admin.ModelAdmin):
     search_fields = [
         "name",
