@@ -43,6 +43,7 @@ class BaseDeleteView(LoginRequiredMixin, generic.DeleteView):
     class Meta:
         abstract = True
 
+
 def index(request):
     context = {
         "num_cooks": Cook.objects.count(),
@@ -60,7 +61,7 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 5
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        context = super(DishTypeListView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
 
         context["search_form"] = DishTypeNameSearchForm(initial={"name": name})
@@ -68,14 +69,12 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         form = DishTypeNameSearchForm(self.request.GET)
-        self.queryset = DishType.objects.all()
+        queryset = super().get_queryset()
 
         if form.is_valid():
-            return self.queryset.filter(
-                name__startswith=form.cleaned_data["name"]
-            )
+            return queryset.filter(name__startswith=form.cleaned_data["name"])
 
-        return self.queryset
+        return queryset
 
 
 class DishTypeCreateView(BaseCreateUpdateView, generic.CreateView):
@@ -100,7 +99,7 @@ class DishListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 5
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        context = super(DishListView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
 
         context["search_form"] = DishNameSearchForm(initial={"name": name})
@@ -108,14 +107,12 @@ class DishListView(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         form = DishNameSearchForm(self.request.GET)
-        self.queryset = Dish.objects.select_related("dish_type")
+        queryset = super().get_queryset().select_related("dish_type")
 
         if form.is_valid():
-            return self.queryset.filter(
-                name__startswith=form.cleaned_data["name"]
-            )
+            return queryset.filter(name__startswith=form.cleaned_data["name"])
 
-        return self.queryset
+        return queryset
 
 
 class DishCreateView(BaseCreateUpdateView, generic.CreateView):
@@ -149,7 +146,7 @@ class CookListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 5
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        context = super(CookListView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         last_name = self.request.GET.get("last_name", "")
 
         context["search_form"] = CookLastNameSearchForm(
@@ -159,14 +156,14 @@ class CookListView(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         form = CookLastNameSearchForm(self.request.GET)
-        self.queryset = get_user_model().objects.prefetch_related("dishes")
+        queryset = super().get_queryset().prefetch_related("dishes")
 
         if form.is_valid():
-            return self.queryset.filter(
+            return queryset.filter(
                 last_name__startswith=form.cleaned_data["last_name"]
             )
 
-        return self.queryset
+        return queryset
 
 
 class CookCreateView(BaseCreateUpdateView, generic.CreateView):
@@ -193,8 +190,11 @@ class CookDeleteView(BaseDeleteView):
 @login_required
 def toggle_assign_to_dish(request, pk):
     cook = get_user_model().objects.get(id=request.user.id)
-    if Dish.objects.get(id=pk) in cook.dishes.all():
-        cook.dishes.remove(pk)
+    dish = Dish.objects.get(id=pk)
+
+    if cook.dishes.filter(id=pk).exists():
+        cook.dishes.remove(dish)
     else:
-        cook.dishes.add(pk)
+        cook.dishes.add(dish)
+
     return HttpResponseRedirect(reverse_lazy("kitchen:dish-detail", args=[pk]))
