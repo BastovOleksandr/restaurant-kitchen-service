@@ -24,7 +24,9 @@ class PrivateIndexViewTests(TestCase):
         self.client.force_login(self.user)
 
     def test_should_use_defined_template(self):
-        self.assertTemplateUsed(self.client.get(INDEX_URL), "kitchen/index.html")
+        self.assertTemplateUsed(
+            self.client.get(INDEX_URL), "kitchen/index.html"
+        )
 
     def test_context_contains_correct_data(self):
         response = self.client.get(INDEX_URL)

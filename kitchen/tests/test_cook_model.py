@@ -1,7 +1,6 @@
 from django.core.management import call_command
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.test import TestCase
-
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 
@@ -27,10 +26,12 @@ class CookModelTests(TestCase):
         field = self.cook._meta.get_field("years_of_experience")
         validators = field.validators
         max_value = next(
-            v.limit_value for v in validators if isinstance(v, MaxValueValidator)
+            v.limit_value
+            for v in validators if isinstance(v, MaxValueValidator)
         )
         min_value = next(
-            v.limit_value for v in validators if isinstance(v, MinValueValidator)
+            v.limit_value
+            for v in validators if isinstance(v, MinValueValidator)
         )
 
         self.assertEqual(max_value, 50)

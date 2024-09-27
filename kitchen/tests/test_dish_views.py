@@ -69,16 +69,17 @@ class PrivateCarViewTests(TestCase):
         self.assertEqual(len(response.context.get("dish_list")), 2)
 
     def test_list_view_context_contain_search_by_name_and_it_works(self):
-        response = self.client.get(LIST_URL + "?name=d")
+        response = self.client.get(LIST_URL + "?name=cAr")
         dishes_ = list(response.context.get("dish_list").values("name"))
         custom_dishes = [
-            {"name": "Deruny"},
-            {"name": "DIY pizza"},
-            {"name": "Drunken Cherry Cake"},
+            {"name": "Baked Carp"},
+            {"name": "Carbonara"},
+            {"name": "Quattro Di Carne"},
+            {"name": "Spaghetti Carbonara"},
         ]
 
         self.assertIn("search_form", response.context)
-        self.assertTrue(len(dishes_) == 3)
+        self.assertTrue(len(dishes_) == 4)
         self.assertCountEqual(custom_dishes, dishes_)
 
     def test_create_view(self):

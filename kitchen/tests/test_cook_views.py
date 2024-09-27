@@ -66,13 +66,15 @@ class PrivateCookViewsTests(TestCase):
         self.assertTrue(response.context.get("is_paginated"))
         self.assertEqual(len(response.context.get("cook_list")), 4)
 
-    def test_list_view_context_contain_search_by_last_name_and_it_works(self):
-        response = self.client.get(LIST_URL + "?last_name=wa")
-        cooks_ = list(response.context.get("cook_list").values("last_name"))
+    def test_list_view_context_contain_search_by_username_and_it_works(self):
+        response = self.client.get(LIST_URL + "?username=eNt")
+        cooks_ = list(response.context.get("cook_list").values("username"))
 
         self.assertIn("search_form", response.context)
-        self.assertTrue(len(cooks_) == 1)
-        self.assertCountEqual([{"last_name": "Walker"}], cooks_)
+        self.assertTrue(len(cooks_) == 2)
+        self.assertCountEqual(
+            [{"username": "Adm1n_Entry"}, {"username": "UsEr_enTrY"}], cooks_
+        )
 
     def test_create_view(self):
         data = {
@@ -89,7 +91,8 @@ class PrivateCookViewsTests(TestCase):
         custom_cook = get_user_model().objects.last()
 
         self.assertRedirects(
-            response, reverse("kitchen:cook-detail", kwargs={"pk": custom_cook.pk})
+            response,
+            reverse("kitchen:cook-detail", kwargs={"pk": custom_cook.pk})
         )
         self.assertTrue(
             get_user_model().objects.filter(username="wwwlast_user").exists()
