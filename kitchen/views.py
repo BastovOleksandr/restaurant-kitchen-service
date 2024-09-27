@@ -1,20 +1,21 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
-from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .forms import (
+
+from kitchen.models import Cook, Dish, DishType
+from kitchen.forms import (
     DishTypeNameSearchForm,
     DishNameSearchForm,
     DishForm,
-    CookLastNameSearchForm,
+    CookUsernameSearchForm,
     CookCreationForm,
     CookExperienceUpdateForm,
 )
-from .models import Cook, Dish, DishType
 
 
 class BaseCreateUpdateView(LoginRequiredMixin):
@@ -65,6 +66,9 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
         name = self.request.GET.get("name", "")
 
         context["search_form"] = DishTypeNameSearchForm(initial={"name": name})
+        context["list_title"] = (
+            f"{self.model._meta.verbose_name_plural.capitalize()} list"
+        )
         return context
 
     def get_queryset(self):
@@ -72,8 +76,9 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
         queryset = super().get_queryset()
 
         if form.is_valid():
-            return queryset.filter(name__startswith=form.cleaned_data["name"])
-
+            return queryset.filter(name__icontains=form.cleaned_data["name"])
+        else:
+            print(form.errors)
         return queryset
 
 
@@ -103,6 +108,9 @@ class DishListView(LoginRequiredMixin, generic.ListView):
         name = self.request.GET.get("name", "")
 
         context["search_form"] = DishNameSearchForm(initial={"name": name})
+        context["list_title"] = (
+            f"{self.model._meta.verbose_name_plural.capitalize()} list"
+        )
         return context
 
     def get_queryset(self):
@@ -110,7 +118,9 @@ class DishListView(LoginRequiredMixin, generic.ListView):
         queryset = super().get_queryset().select_related("dish_type")
 
         if form.is_valid():
-            return queryset.filter(name__startswith=form.cleaned_data["name"])
+            name = form.cleaned_data.get("name")
+            if name:
+                return queryset.filter(name__icontains=name)
 
         return queryset
 
@@ -123,10 +133,10 @@ class DishCreateView(BaseCreateUpdateView, generic.CreateView):
 
 class DishDetailView(LoginRequiredMixin, generic.DetailView):
     model = Dish
-    queryset = Dish.objects.select_related(
-        "dish_type"
-    ).prefetch_related(
-        "cooks"
+    queryset = (
+        Dish.objects.
+        select_related("dish_type").
+        prefetch_related("cooks")
     )
 
 
@@ -147,20 +157,23 @@ class CookListView(LoginRequiredMixin, generic.ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        last_name = self.request.GET.get("last_name", "")
+        username = self.request.GET.get("username", "")
 
-        context["search_form"] = CookLastNameSearchForm(
-            initial={"last_name": last_name}
+        context["search_form"] = CookUsernameSearchForm(
+            initial={"username": username}
+        )
+        context["list_title"] = (
+            f"{self.model._meta.verbose_name_plural.capitalize()} list"
         )
         return context
 
     def get_queryset(self):
-        form = CookLastNameSearchForm(self.request.GET)
+        form = CookUsernameSearchForm(self.request.GET)
         queryset = super().get_queryset().prefetch_related("dishes")
 
         if form.is_valid():
             return queryset.filter(
-                last_name__startswith=form.cleaned_data["last_name"]
+                username__icontains=form.cleaned_data["username"]
             )
 
         return queryset
