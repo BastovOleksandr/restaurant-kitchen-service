@@ -2,32 +2,24 @@ from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
 
-from kitchen.models import Dish, Cook, DishType
+from kitchen.models import Dish, Cook
 
 
-class BaseSearchByNameForm(forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields["name"].required = False
-        self.fields["name"].label = ""
-        self.fields["name"].widget.attrs.update(
-            {
-                "max_length": self.fields["name"].max_length,
-                "placeholder": "Search by name",
-            }
-        )
+class BaseSearchByNameForm(forms.Form):
+    name = forms.CharField(
+        max_length=63,
+        required=False,
+        label="",
+        widget=forms.TextInput(attrs={"placeholder": "Search by name"}),
+    )
 
 
 class DishNameSearchForm(BaseSearchByNameForm):
-    class Meta:
-        model = Dish
-        fields = ["name"]
+    pass
 
 
 class DishTypeNameSearchForm(BaseSearchByNameForm):
-    class Meta:
-        model = DishType
-        fields = ["name"]
+    pass
 
 
 class DishForm(forms.ModelForm):
@@ -58,10 +50,10 @@ class CookExperienceUpdateForm(forms.ModelForm):
         fields = ["years_of_experience"]
 
 
-class CookLastNameSearchForm(forms.Form):
-    last_name = forms.CharField(
+class CookUsernameSearchForm(forms.Form):
+    username = forms.CharField(
         max_length=150,
         required=False,
         label="",
-        widget=forms.TextInput(attrs={"placeholder": "Search by last name"}),
+        widget=forms.TextInput(attrs={"placeholder": "Search by username"}),
     )
