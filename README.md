@@ -7,11 +7,13 @@ Other developers can easily extend the project by adding features such as more d
 
 ## [Click here to check out](https://restaurant-kitchen-service-cvp4.onrender.com/)
 #### To log in into BUFET Website you can use:
-Username: Adm1n_Entry
-Password: sEcuRe_paSS
-
-or any login/password combo from kitchen/fixtures/base_fixture.json
-
+Adm1n_Entry
+####
+sEcuRe_paSS
+#### or
+UsEr_enTrY
+####
+UseR_PaSs
 ## Installation
 1. **Clone the repository:**
 
@@ -63,14 +65,35 @@ or any login/password combo from kitchen/fixtures/base_fixture.json
     ```bash
     python manage.py createsuperuser
     ```
+   
+## You are ready to go! But if you want more config
 
-8. **Run server:**
+8. **If you plan to run the project locally with DEBUG=False in the ".env" file**
+
+    ```bash
+    python manage.py collectstatic
+    ```
+
+9. **You can rename "env.sample" to ".env" and use it to configure your database settings. More info inside the file**
+
+    ```bash
+   DB_ENGINE          # Database engine
+   DB_HOST            # Database host
+   DB_NAME            # Name of the database
+   DB_USER            # Username for database connection
+   DB_PASSWORD        # Password for database connection
+   DJANGO_SECRET_KEY  # For security, must be unique and secret
+   USE_DEFAULT_DB     # Use built-in sqlite3 local database in projects root dir
+   DJANGO_DEBUG       # Django debug mode
+    ```
+
+10. **Run server:**
 
     ```bash
     python manage.py runserver
     ```
 
-9. **Access the application in your web browser at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
+11. **Access the application in your web browser at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
 
 ### How to use
 
@@ -79,3 +102,7 @@ or any login/password combo from kitchen/fixtures/base_fixture.json
 - View Cook Profiles: Each cook has a profile showing their details and the dishes they are assigned to
 - Assign/Unassign Cooks to Dishes: As a logged-in user, you can assign or unassign cooks to specific dishes
 - Manage Dishes and Cooks: If you have the proper permissions, you can add, edit, or remove dishes and cook profiles
+
+### Demo
+
+![Website interface](demo.png)
