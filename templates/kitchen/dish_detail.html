@@ -15,23 +15,15 @@
           <p class="mb-1"><strong>Dish Type:</strong> {{ dish.dish_type.name }}</p>
         </div>
       </div>
-
-      <h4 class="mb-3">Cooks</h4>
       <div class="d-flex justify-content-between align-items-center mb-3">
-        <div>
-          {% if dish in user.dishes.all %}
-            <a href="{% url "kitchen:toggle-dish-assign" pk=dish.id %}" class="btn btn-danger">Delete me from this
-              dish</a>
-          {% else %}
-            <a href="{% url "kitchen:toggle-dish-assign" pk=dish.id %}" class="btn btn-success">Assign me to this
-              dish</a>
-          {% endif %}
-        </div>
+        <h4 class="mb-3">Cooks</h4>
+        <form action="{% url "kitchen:dish-detail" pk=dish.id %}" method="post">
+          {% csrf_token %}
+          <button type="submit" class="{{ button_class }}">{{ change_status }}</button>
+        </form>
       </div>
-
-      <hr>
       <ul class="list-group">
-      
+
         {% for cook in dish.cooks.all %}
           <li class="list-group-item d-flex justify-content-between align-items-start">
             <div>
@@ -41,7 +33,7 @@
         {% empty %}
           <li class="list-group-item text-muted">No cooks assigned to this dish!</li>
         {% endfor %}
-      
+
       </ul>
     </div>
   </div>
