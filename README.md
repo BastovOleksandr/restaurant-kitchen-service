@@ -66,7 +66,7 @@ UseR_PaSs
     python manage.py createsuperuser
     ```
    
-## You are ready to go! But if you want more config
+## You are ready to go! Just check out last step. But if you want more config
 
 8. **If you plan to run the project locally with DEBUG=False in the ".env" file**
 
