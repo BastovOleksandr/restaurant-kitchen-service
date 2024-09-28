@@ -33,6 +33,14 @@ SECRET_KEY = os.environ.get(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DJANGO_DEBUG", "") != "False"
 
+# HTTPS settings
+CSRF_COOKIE_SECURE = not DEBUG
+
+SESSION_COOKIE_SECURE = not DEBUG
+
+SECURE_SSL_REDIRECT = not DEBUG
+
+# Hosts settings
 ALLOWED_HOSTS = [
     "restaurant-kitchen-service-cvp4.onrender.com",
     "127.0.0.1",
