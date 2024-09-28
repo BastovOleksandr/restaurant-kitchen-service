@@ -21,7 +21,7 @@ class Cook(AbstractUser):
         ordering = (Lower("username"),)
 
     def get_absolute_url(self):
-        return reverse("kitchen:cook-detail", kwargs={"pk": self.pk})
+        return reverse("kitchen:cook-detail", kwargs={"pk": self.id})
 
     def __str__(self) -> str:
         return f'"{self.username}"'
@@ -33,6 +33,10 @@ class DishType(models.Model):
     class Meta:
         ordering = (Lower("name"),)
 
+    def save(self, *args, **kwargs):
+        self.name = self.name.lower().capitalize()
+        super().save(*args, **kwargs)
+
     def __str__(self) -> str:
         return f'dish type: "{self.name}"'
 
@@ -43,6 +47,10 @@ class Dish(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     dish_type = models.ForeignKey(DishType, on_delete=models.CASCADE)
     cooks = models.ManyToManyField(AUTH_USER_MODEL)
+
+    def save(self, *args, **kwargs):
+        self.name = self.name.lower().capitalize()
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = "dishes"
