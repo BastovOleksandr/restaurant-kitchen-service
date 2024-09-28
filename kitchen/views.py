@@ -1,5 +1,4 @@
 from django.contrib.auth import get_user_model
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -18,7 +17,7 @@ from kitchen.forms import (
 )
 
 
-class BaseCreateUpdateView(LoginRequiredMixin):
+class CreateUpdateViewMixin:
     template_name = "kitchen/create_update_form.html"
 
     def get_context_data(self, **kwargs):
@@ -33,13 +32,6 @@ class BaseCreateUpdateView(LoginRequiredMixin):
             f"Update {object_name}" if self.object else f"Create {model_name}"
         )
         return context
-
-    class Meta:
-        abstract = True
-
-
-class BaseDeleteView(LoginRequiredMixin, generic.DeleteView):
-    template_name = "kitchen/confirm_delete.html"
 
     class Meta:
         abstract = True
@@ -65,6 +57,7 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
         context = super().get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
 
+        context["create_url"] = reverse_lazy("kitchen:dish-type-create")
         context["search_form"] = DishTypeNameSearchForm(initial={"name": name})
         context["list_title"] = (
             f"{self.model._meta.verbose_name_plural.capitalize()} list"
@@ -82,20 +75,29 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
         return queryset
 
 
-class DishTypeCreateView(BaseCreateUpdateView, generic.CreateView):
+class DishTypeCreateView(
+    LoginRequiredMixin,
+    CreateUpdateViewMixin,
+    generic.CreateView
+):
     model = DishType
     fields = "__all__"
     success_url = reverse_lazy("kitchen:dish-type-list")
 
 
-class DishTypeUpdateView(BaseCreateUpdateView, generic.UpdateView):
+class DishTypeUpdateView(
+    LoginRequiredMixin,
+    CreateUpdateViewMixin,
+    generic.UpdateView
+):
     model = DishType
     fields = "__all__"
     success_url = reverse_lazy("kitchen:dish-type-list")
 
 
-class DishTypeDeleteView(BaseDeleteView):
+class DishTypeDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = DishType
+    template_name = "kitchen/confirm_delete.html"
     success_url = reverse_lazy("kitchen:dish-type-list")
 
 
@@ -107,6 +109,7 @@ class DishListView(LoginRequiredMixin, generic.ListView):
         context = super().get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
 
+        context["create_url"] = reverse_lazy("kitchen:dish-create")
         context["search_form"] = DishNameSearchForm(initial={"name": name})
         context["list_title"] = (
             f"{self.model._meta.verbose_name_plural.capitalize()} list"
@@ -125,7 +128,11 @@ class DishListView(LoginRequiredMixin, generic.ListView):
         return queryset
 
 
-class DishCreateView(BaseCreateUpdateView, generic.CreateView):
+class DishCreateView(
+    LoginRequiredMixin,
+    CreateUpdateViewMixin,
+    generic.CreateView
+):
     model = Dish
     form_class = DishForm
     success_url = reverse_lazy("kitchen:dish-list")
@@ -139,15 +146,44 @@ class DishDetailView(LoginRequiredMixin, generic.DetailView):
         prefetch_related("cooks")
     )
 
+    def post(self, request, *args, **kwargs):
+        dish = self.get_object()
 
-class DishUpdateView(BaseCreateUpdateView, generic.UpdateView):
+        if dish.cooks.filter(id=request.user.id).exists():
+            dish.cooks.remove(request.user)
+        else:
+            dish.cooks.add(request.user)
+
+        return HttpResponseRedirect(
+            reverse_lazy("kitchen:dish-detail", args=[dish.id])
+        )
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        if self.get_object().cooks.filter(id=self.request.user.id).exists():
+            context["change_status"] = "Delete me from this dish"
+            context["button_class"] = "btn btn-danger"
+        else:
+            context["change_status"] = "Assign me to this dish"
+            context["button_class"] = "btn btn-success"
+
+        return context
+
+
+class DishUpdateView(
+    LoginRequiredMixin,
+    CreateUpdateViewMixin,
+    generic.UpdateView
+):
     model = Dish
     form_class = DishForm
     success_url = reverse_lazy("kitchen:dish-list")
 
 
-class DishDeleteView(BaseDeleteView):
+class DishDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Dish
+    template_name = "kitchen/confirm_delete.html"
     success_url = reverse_lazy("kitchen:dish-list")
 
 
@@ -159,6 +195,7 @@ class CookListView(LoginRequiredMixin, generic.ListView):
         context = super().get_context_data(**kwargs)
         username = self.request.GET.get("username", "")
 
+        context["create_url"] = reverse_lazy("kitchen:cook-create")
         context["search_form"] = CookUsernameSearchForm(
             initial={"username": username}
         )
@@ -179,7 +216,11 @@ class CookListView(LoginRequiredMixin, generic.ListView):
         return queryset
 
 
-class CookCreateView(BaseCreateUpdateView, generic.CreateView):
+class CookCreateView(
+    LoginRequiredMixin,
+    CreateUpdateViewMixin,
+    generic.CreateView
+):
     model = Cook
     form_class = CookCreationForm
 
@@ -189,25 +230,13 @@ class CookDetailView(LoginRequiredMixin, generic.DetailView):
     queryset = get_user_model().objects.prefetch_related("dishes__dish_type")
 
 
-class CookExperienceUpdateView(BaseCreateUpdateView, generic.UpdateView):
+class CookExperienceUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Cook
     form_class = CookExperienceUpdateForm
     success_url = reverse_lazy("kitchen:cook-list")
 
 
-class CookDeleteView(BaseDeleteView):
+class CookDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Cook
+    template_name = "kitchen/confirm_delete.html"
     success_url = reverse_lazy("kitchen:cook-list")
-
-
-@login_required
-def toggle_assign_to_dish(request, pk):
-    cook = get_user_model().objects.get(id=request.user.id)
-    dish = Dish.objects.get(id=pk)
-
-    if cook.dishes.filter(id=pk).exists():
-        cook.dishes.remove(dish)
-    else:
-        cook.dishes.add(dish)
-
-    return HttpResponseRedirect(reverse_lazy("kitchen:dish-detail", args=[pk]))
