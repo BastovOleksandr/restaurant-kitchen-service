@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+  <div class="d-flex flex-column align-items-center justify-content-center vh-20 bg-primary text-white rounded">
+    <h1>Restaurant kitchen service</h1>
+    <p>The restaurant kitchen service has the following record counts:</p>
+  </div>
+  <section class="pt-3 pb-4" id="count-stats">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto py-3">
+          <div class="row">
+            <div class="col-md-4 position-relative">
+              <div class="p-3 text-center">
+                <h1 class="text-gradient text-primary"><span id="state1" countTo="{{ num_dishes }}">0</span>+</h1>
+                <h5 class="mt-3">Dishes</h5>
+                <p class="text-sm font-weight-normal">Experience the finest flavors crafted just for you!</p>
+              </div>
+            </div>
+            <div class="col-md-4 position-relative">
+              <div class="p-3 text-center">
+                <h1 class="text-gradient text-primary"><span id="state2" countTo="{{ num_cooks }}">0</span>+</h1>
+                <h5 class="mt-3">Cooks</h5>
+                <p class="text-sm font-weight-normal">
+                  Our talented chefs bring passion and creativity to every plate!
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3 text-center">
+                <h1 class="text-gradient text-primary" id="state3" countTo="{{ num_dish_types }}">0</h1>
+                <h5 class="mt-3">Dish types</h5>
+                <p class="text-sm font-weight-normal">
+                  Join us for the crowd-pleasers that keep our guests coming back!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="{% static "js/count.js" %}"></script>
+  <script src="{% static "js/index_counter.js" %}"></script>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% load crispy_forms_filters %}
+
+<h1 class="text-center display-4 text-primary mb-4">{{ list_title }}</h1>
+<div class="d-flex justify-content-between align-items-center">
+  <form action="" method="get" class="d-flex flex-row align-items-center flex-wrap">
+    {{ search_form|crispy }}
+    <input class="btn btn-primary mb-3" type="submit" value="Search">
+  </form>
+  <a href="{% url "kitchen:cook-create" %}" class="btn btn-primary mb-3">Create</a>
+</div>
